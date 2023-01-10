@@ -1,0 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Henny Penny', cursive;
+    color: white;
+}
