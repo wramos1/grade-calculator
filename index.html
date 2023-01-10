@@ -10,12 +10,39 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <ul id="navbarList">
+            <li>
+                Overall
+            </li>
+            <li>
+                Category
+            </li>
+        </ul>
+    </nav>
+    <h1 id="title">
+        Grade Calculator
+    </h1>
 
-    <div>
-        <h1>
-            Grade Calculator
-        </h1>
+    <div id="labelContainer">
+        <label for="name">Name</label>
+        <label for="weight">Weight</label>
+        <label for="grade">Grade</label>
     </div>
+
+    <form id="formContainer">
+        <div class="category">
+            <input type="text" id="name">
+        </div>
+
+        <div class="category">
+            <input type="text" id="weight">
+        </div>
+
+        <div class="category">
+            <input type="text" id="grade">
+        </div>
+    </form>
 
 </body>
 <script src='app.js'></script>

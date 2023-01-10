@@ -1,10 +1,44 @@
-html {
-    scroll-behavior: smooth;
-}
-
-body {
+html,body {
     margin: 0;
+    padding: 0;
     background-color: black;
-    font-family: 'Henny Penny', cursive;
     color: white;
 }
+
+#title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+#navbarList {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    width: 25%;
+    font-size: 1.3rem;
+    font-weight: light;
+}
+
+#labelContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 5%;
+}
+
+#formContainer {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+    margin: 10px 5%;
+}
+
+label,input{
+    display: block;
+  }
