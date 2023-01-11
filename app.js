@@ -23,6 +23,7 @@ function getCategories() {
             createStoredCategory(category);
         })
     } else {
+        createCategory();
         updateCategories();
     }
 }
@@ -35,16 +36,19 @@ function createCategory() {
         const textInput = document.createElement('input');
         const category = document.createElement('div');
         category.classList.add('category');
-        textInput.type = 'text';
+        textInput.required = true;
         if (i === 0) {
+            textInput.type = 'text';
             textInput.id = 'name';
-            textInput.placeholder = 'Enter category name'
+            textInput.placeholder = 'Enter category name';
         }
         else if (i === 1) {
+            textInput.type = 'number';
             textInput.id = 'weight';
-            textInput.placeholder = '%'
+            textInput.placeholder = '%';
         }
         else if (i === 2) {
+            textInput.type = 'number';
             textInput.id = 'grade';
             textInput.placeholder = '%'
         }
@@ -56,6 +60,15 @@ function createCategory() {
     updateCategories();
 };
 
+function deleteCategory() {
+    if (formContainer.children.length === 1) {
+        alert('Category is required');
+        return;
+    }
+    formContainer.removeChild(formContainer.lastChild);
+    updateCategories();
+}
+
 function createStoredCategory(storedCategory) {
     const newCategoryDiv = document.createElement('div');
     newCategoryDiv.className = 'category-container';
@@ -63,18 +76,21 @@ function createStoredCategory(storedCategory) {
         const textInput = document.createElement('input');
         const category = document.createElement('div');
         category.classList.add('category');
-        textInput.type = 'text';
+        textInput.required = true;
         if (i === 0) {
+            textInput.type = 'text';
             textInput.value = storedCategory['name'];
             textInput.id = 'name';
             textInput.placeholder = 'Enter category name'
         }
         else if (i === 1) {
+            textInput.type = 'number';
             textInput.value = storedCategory['weight'];
             textInput.id = 'weight';
             textInput.placeholder = '%'
         }
         else if (i === 2) {
+            textInput.type = 'number';
             textInput.value = storedCategory['grade'];
             textInput.id = 'grade';
             textInput.placeholder = '%'
@@ -90,3 +106,4 @@ function createStoredCategory(storedCategory) {
 window.addEventListener('onload', getCategories());
 
 addButton.addEventListener('click', createCategory)
+subtractButton.addEventListener('click', deleteCategory)

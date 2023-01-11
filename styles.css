@@ -70,6 +70,14 @@ html,body {
     font-size: 1.2em;
 }
 
+#submitBtn {
+    display: flex;
+    margin: 5% auto;
+    font-size: 0.95em;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 label,input{
     display: block;
   }
