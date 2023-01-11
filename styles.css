@@ -13,7 +13,7 @@ html,body {
 #navbar {
     display: flex;
     justify-content: flex-end;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 #navbarList {
@@ -29,14 +29,45 @@ html,body {
 #labelContainer {
     display: flex;
     justify-content: space-around;
-    margin: 0 5%;
+    margin: 0 15%;
+    font-size: 1.2rem;
+}
+
+#overallGradeContent{
+    margin: 10px 15%;
 }
 
 #formContainer {
+    border: 1px solid white;
+}
+
+.category-container {
     display: flex;
     justify-content: space-around;
-    border: 1px solid white;
-    margin: 10px 5%;
+    margin: 15px 0;
+}
+
+.category:nth-child(2n), .category:nth-child(3n){
+    display: flex;
+    justify-content: center;
+}
+
+.category:nth-child(2n) input, .category:nth-child(3n) input{
+    width: 50%;
+}
+
+#addCategory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+    padding: 0 10px;
+    border: 1px solid;
+    height: 30px;
+}
+
+#addTitle {
+    font-size: 1.2em;
 }
 
 label,input{
