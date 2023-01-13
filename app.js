@@ -111,7 +111,6 @@ function calculateGrade() {
     updateCategories();
     document.querySelectorAll('.new').forEach(e => e.remove());
 
-
     let totalWeight = [];
     let totalPercentageOfWeight = 0;
     localCategoryData.map((category) => {
@@ -125,7 +124,7 @@ function calculateGrade() {
 
     for (let i = 0; i < localCategoryData.length; i++) {
         if (localCategoryData[i]['name'] === '' || localCategoryData[i]['weight'] === '' || localCategoryData[i]['grade'] === '') {
-            alert('Please provide fill out all input fields');
+            alert('Please fill out all input fields');
             return;
         }
         const newCategoryListItem = document.createElement('li');
