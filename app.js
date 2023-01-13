@@ -1,6 +1,7 @@
 const addButton = document.querySelector("#addButton");
 const subtractButton = document.querySelector("#subtractButton");
 const submitButton = document.querySelector("#submitBtn");
+const closeGradeButton = document.querySelector("#closeGrade");
 const formContainer = document.querySelector("#formContainer");
 const gradeContainer = document.querySelector(".grade-container");
 const listedCategories = document.querySelector(".category-list");
@@ -160,11 +161,16 @@ function calculateGrade() {
     estimatedGradeDiv.appendChild(gradeTitle);
 
     gradeContainer.style.display = 'flex';
-
+    gradeContainer.scrollIntoView({ behavior: 'smooth' });
 };
+
+const closeGrade = () => {
+    gradeContainer.style.display = 'none';
+}
 
 
 window.addEventListener('onload', getCategories());
 submitButton.addEventListener('click', calculateGrade);
 addButton.addEventListener('click', createCategory);
 subtractButton.addEventListener('click', deleteCategory);
+closeGradeButton.addEventListener('click', closeGrade);
